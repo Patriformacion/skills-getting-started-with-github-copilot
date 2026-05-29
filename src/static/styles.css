@@ -142,3 +142,83 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+/* Participants list styles */
+.participants {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #eaf4ff; /* light blue background for participants card */
+  border: 1px solid #d6eaf8;
+}
+.participants h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a237e;
+}
+.participants ul {
+  list-style: none; /* hide default bullets */
+  margin: 0;
+  padding-left: 0;
+  max-height: 120px;
+  overflow: auto;
+}
+.participants ul li::marker {
+  color: #000; /* black bullets */
+  font-weight: 700; /* make bullets bold */
+}
+.participants ul li {
+  padding: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+.participants.empty p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* Remove button styles */
+.remove-participant {
+  margin-left: 12px;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.remove-participant:hover {
+  background: rgba(198,40,40,0.08);
+}
+.participants ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* push icon to the right */
+  gap: 12px;
+}
+.participant-email {
+  color: #333;
+  flex: 1 1 auto; /* allow email to take available space */
+  min-width: 0; /* allow truncation/wrapping inside flex */
+  word-break: break-word;
+}
+.remove-participant {
+  margin-left: 0;
+  flex: 0 0 auto; /* keep button size fixed */
+}
+
+/* Trash icon specifics */
+.remove-participant .icon-trash {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.remove-participant .icon-trash path {
+  fill: #c62828; /* red fill for trash */
+}
+.remove-participant:hover .icon-trash path {
+  fill: #a50f0f; /* darker on hover */
+}
